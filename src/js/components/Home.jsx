@@ -1,28 +1,32 @@
-import React from "react";
+import { MenuBar } from './MenuBar';
+import { MediaCard } from './MediaCard';
+import { Header } from './Header';
+import { Footer } from './Footer';
+import { Container, Grid } from '@mui/material';
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
-//create your first component
-const Home = () => {
-	return (
-		<div className="text-center">
-            
-
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
-	);
-};
-
-export default Home;
+export const Home = () => {
+  return (
+    <>
+      <MenuBar />
+      <Container>
+        <Header />
+        <Grid container spacing={{ md: 6 }}>
+          <Grid  size={{ xs: 12, md: 3 }}>
+            <MediaCard />
+          </Grid>
+          <Grid  size={{ xs: 12, md: 3 }}>
+            <MediaCard />
+          </Grid>
+          <Grid  size={{ xs: 12, md: 3 }}>
+            <MediaCard />
+          </Grid>
+          <Grid  size={{ xs: 12, md: 3 }}>
+            <MediaCard />
+          </Grid>
+        </Grid>
+      </Container>
+      <Footer />
+    </>
+  );
+}
