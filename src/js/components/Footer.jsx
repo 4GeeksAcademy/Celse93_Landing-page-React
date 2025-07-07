@@ -4,7 +4,7 @@ import CopyrightIcon from '@mui/icons-material/Copyright';
 
 export const Footer = () => {
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box>
             <AppBar position="static" sx={{ mt: "25px" }}>
                 <Toolbar sx={{ justifyContent: 'center' }}>
                     <Typography>
